@@ -1,4 +1,3 @@
 # myvimrc
 
-跳转命令
-:YcmCompleter GoTo
+当你的jetbrains学生优惠到期后。。。。
