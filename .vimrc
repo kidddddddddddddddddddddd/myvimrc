@@ -11,6 +11,7 @@ Plug '907th/vim-auto-save'
 Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/indentLine'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'majutsushi/tagbar'
 Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
@@ -46,6 +47,13 @@ let g:airline_theme = 'desertink'
 "indentLine
 let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
 let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
+"tagbar
+"brew install ctags-exuberant
+"brew install gotags
+let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_2/bin/ctags'
+let g:tagbar_autofocus = 1
+autocmd VimEnter * nested TagbarOpen
+nmap <F9> :TagbarToggle<CR>
 "youcompleteme
 let g:ycm_semantic_triggers =  {
 			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
