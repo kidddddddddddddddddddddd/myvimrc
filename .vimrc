@@ -12,6 +12,8 @@ Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/indentLine'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'majutsushi/tagbar'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
 Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
@@ -24,15 +26,8 @@ set number
 set smartindent
 set mouse=a
 
-inoremap ' ''<ESC>i
-inoremap " ""<ESC>i
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap { {<CR>}<ESC>O
-
 "NERDTree
 autocmd vimenter * NERDTree
-let NERDTreeShowBookmarks=1
 nnoremap <F3> :NERDTreeToggle<CR> " F3开关
 "autosave
 let g:auto_save = 1  " enable AutoSave on Vim startup
