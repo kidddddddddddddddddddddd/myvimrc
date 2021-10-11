@@ -31,6 +31,7 @@ set backspace=2
 "NERDTree
 autocmd vimenter * NERDTree
 nnoremap <F3> :NERDTreeToggle<CR> " F3开关
+let g:NERDTreeWinSize = max([25,winwidth(0) / 5])
 "autosave
 let g:auto_save = 1  " enable AutoSave on Vim startup
 "colorscheme
@@ -42,13 +43,14 @@ let g:airline#extensions#tabline#buffer_nr_show = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_theme = 'desertink'
 "indentLine
-let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
-let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
+let g:indent_guides_guide_size = 1  " 指定对齐线的尺寸
+let g:indent_guides_start_level = 2  " 从第二层开始可视化显示缩进
 "tagbar
 "brew install ctags-exuberant
 "brew install gotags
-let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_2/bin/ctags'
+let g:Tlist_Ctags_Cmd ='/usr/local/Cellar/ctags/5.8_2/bin/ctags'
 let g:tagbar_autofocus = 1
+let g:tagbar_width = max([25, winwidth(0) / 5])
 autocmd VimEnter * nested TagbarOpen
 nmap <F9> :TagbarToggle<CR>
 "autoformat
@@ -57,7 +59,7 @@ au BufWrite * :Autoformat
 "rainbow
 let g:rainbow_active = 1
 "youcompleteme
-let g:ycm_semantic_triggers =  {
+let g:ycm_semantic_triggers = {
 			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
 			\ 'cs,lua,javascript': ['re!\w{2}'],
 			\ }
