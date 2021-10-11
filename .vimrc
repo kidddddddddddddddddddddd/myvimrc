@@ -14,6 +14,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'majutsushi/tagbar'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
+Plug 'Chiel92/vim-autoformat'
 Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
@@ -50,6 +51,9 @@ let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_2/bin/ctags'
 let g:tagbar_autofocus = 1
 autocmd VimEnter * nested TagbarOpen
 nmap <F9> :TagbarToggle<CR>
+"autoformat
+"need llvm,gofmt
+au BufWrite * :Autoformat
 "youcompleteme
 let g:ycm_semantic_triggers =  {
 			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
