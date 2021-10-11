@@ -54,6 +54,8 @@ nmap <F9> :TagbarToggle<CR>
 "autoformat
 "need llvm,gofmt
 au BufWrite * :Autoformat
+"rainbow
+let g:rainbow_active = 1
 "youcompleteme
 let g:ycm_semantic_triggers =  {
 			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
