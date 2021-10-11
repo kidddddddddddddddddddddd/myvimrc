@@ -25,6 +25,7 @@ set shiftwidth=4
 set number
 set smartindent
 set mouse=a
+set backspace=2
 
 "NERDTree
 autocmd vimenter * NERDTree
