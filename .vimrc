@@ -27,6 +27,7 @@ set number
 set smartindent
 set mouse=a
 set backspace=2
+set clipboard=unnamed
 
 "NERDTree
 autocmd vimenter * NERDTree
